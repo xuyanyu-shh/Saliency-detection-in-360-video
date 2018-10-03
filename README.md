@@ -68,3 +68,5 @@ If you find this repo useful in your research, please consider citing:
     }
 ```
 
+PS: 
+There is another link [here](https://github.com/svip-lab/Saliency-Detection-in-360-Videos) about this work in our Lab website.
