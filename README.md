@@ -47,6 +47,9 @@ This repo contains the codes that used in paper *Saliency Detection in 360° Vid
 ### Known issues
   - The process of determining the kernel area at different θ locations is unstable, which will cause output feature maps contain some `nan` values. However, this bug seems to have minor effects during training and testing. We will try to fix it later.
   
+### Dataset
+  You can download our dataset [[Baidu Pan]](https://pan.baidu.com/s/1akj0-8obIwC9oykTYSUm9Q) (code:ry6u), which consists of 104 videos. There are 12 zip files, and train/test index. After downloading these zips, unzip them together. There are 104 files and 'vinfo.pkl'. Each file consists of *.jpg (RGB image) and *.npy (ground truth heatmaps). The 'pkl' file consists of the original groud truth gaze points of the observers.    
+  
 ### TODO
   - [x] Release core functions and modules
   - [x] Release training code for saliency detection
