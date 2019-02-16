@@ -1,11 +1,7 @@
-# Saliency-detection-in-360-video
-Saliency Detection in 360$^\circ$ Videos (ECCV2018)
+# Saliency Detection in 360° Videos
+![spherical_conv](https://preview.ibb.co/dS2vgz/Picture1.png)
 
-This project hosts the dataset and code for our ECCV 2018 paper
-
-- Ziheng Zhang, Yanyu Xu, Jingyi Yu, and Shenghua Gao, Saliency Detection in 360$^\circ$ Videos
-
-This paper presents a novel spherical convolutional neural network based scheme for saliency detection for $360^\circ$ videos. Specifically, in our spherical convolution neural network definition, kernel is defined on a spherical crown, and the convolution involves the rotation of the kernel along the sphere. Considering that the $360^\circ$ videos are usually stored with equirectangular panorama, we propose to implement the spherical convolution on panorama by stretching and rotating the kernel based on the location of patch to be convolved. Compared with existing spherical convolution, our definition has the parameter sharing property, which would greatly reduce the parameters to be learned. We further take the temporal coherence of the viewing process into consideration, and propose a sequential saliency detection by leveraging a spherical U-Net. To validate our approach, we construct a large-scale $360^\circ$ videos saliency detection benchmark that consists of 104 $360^\circ$ videos viewed by 20+ human subjects. Comprehensive experiments validate the effectiveness of our spherical U-net for $360^\circ$ video saliency detection.
+> This figure indicates how spherical crown kernel changes on sphere and projected panorama from north pole to south pole with angle interval equaling π=4. The first raw is the region of the spherical crown kernel on sphere. The second raw shows the region of spherical crown kernel on the projected panorama. The third row shows sampling grid corresponding to each kernel location. Red curve represents θ sampling grid and blue curve represents φ sampling grid.
 
 ### Introduction
 This repo contains the codes that used in paper *Saliency Detection in 360° Videos* by **Ziheng Zhang, Yanyu Xu**, Jingyi Yu and Shenghua Gao.
@@ -19,7 +15,13 @@ This repo contains the codes that used in paper *Saliency Detection in 360° Vid
 ### File structure
 ```
 - test.py
-  purpose: Provides test model that uses spherical convolution.
+  purpose: Provides a simple test model that uses spherical convolution.
+- spherical_unet.py
+  purpose: Provides the implementation of Spherical U-Net that we used in our paper.
+- train.py
+  purpose: Provides training codes for Spherical U-Net.
+- data.py
+  purpose: Provides the dataloader for our dataset to train Spherical U-Net.
 - sconv
   - functional
     - common.py
@@ -47,7 +49,7 @@ This repo contains the codes that used in paper *Saliency Detection in 360° Vid
   
 ### TODO
   - [x] Release core functions and modules
-  - [ ] Release training and testing code for saliency detection
+  - [x] Release training code for saliency detection
   - [ ] Resolve the math unstability when calculating the kernel area at different θ locations
   - [ ] Rewrite spherical convolution for torch 0.4+
 
@@ -67,6 +69,3 @@ If you find this repo useful in your research, please consider citing:
         year = {2018}
     }
 ```
-
-PS: 
-There is another link [here](https://github.com/svip-lab/Saliency-Detection-in-360-Videos) about this work in our Lab website.
