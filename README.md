@@ -1,7 +1,7 @@
 # Saliency Detection in 360° Videos
 ![spherical_conv](https://preview.ibb.co/dS2vgz/Picture1.png)
 
-> This figure indicates how spherical crown kernel changes on sphere and projected panorama from north pole to south pole with angle interval equaling π=4. The first raw is the region of the spherical crown kernel on sphere. The second raw shows the region of spherical crown kernel on the projected panorama. The third row shows sampling grid corresponding to each kernel location. Red curve represents θ sampling grid and blue curve represents φ sampling grid.
+> This figure indicates how spherical crown kernel changes on sphere and projected panorama from north pole to south pole with angle interval equaling π=4. The first row is the region of the spherical crown kernel on sphere. The second row shows the region of spherical crown kernel on the projected panorama. The third row shows sampling grid corresponding to each kernel location. Red curve represents θ sampling grid and blue curve represents φ sampling grid.
 
 ### Introduction
 This repo contains the codes that used in paper *Saliency Detection in 360° Videos* by **Ziheng Zhang, Yanyu Xu**, Jingyi Yu and Shenghua Gao.
